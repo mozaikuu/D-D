@@ -9,17 +9,53 @@ from Dice20 import roll20
 #################################################################################
 # Testing the code
 
+moussa = necromancer("moussa", "female", "skeleton")
+saif = bandit("saif", "male", "human")
+# khalid
+# omar
+# nour
+# waleed
+# mohamed
+
+
 # call the class bandit and print the inventory list
-# saif = archer("human")
+# saif.healthbar.update()
 # print(saif.inventory)
 # print(saif.shoot_arrow())
 # print(saif.inventory["arrows"])
 # [print(i.name) for i in saif.inventory]
 # saif.inventory[0].throw_axe(bandit)
 
+# print(saif.level)
+
+import ast
+
+savefile = f"{saif.name}.txt"
+
+def savefile():
+  with open(savefile, "w") as f:
+    f.write(str(saif.__dict__))
+    
+def loadfile():
+  with open(savefile, "r") as f:
+    read = f.read()
+    print(read)
+  
+savefile()
+loadfile()
+
+# try:
+#   values = ast.literal_eval(load())
+#   print(values)
+# except:
+#   print("creating new file...")
+#   values = {}
+  
+
+
 #################################################################################
 
-
+# save state
 
 
 

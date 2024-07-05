@@ -37,3 +37,5 @@
 # dmg_types = {}
 
 # items = {}
+
+# HOW TO USE

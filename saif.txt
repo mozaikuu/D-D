@@ -1,0 +1,1 @@
+{'gender': 'male', 'name': 'saif', 'class_name': 'bandit', 'race': 'human', 'inventory': [<Weapons.axe object at 0x000001C9A1047920>, <Weapons.axe object at 0x000001C9A1047920>]}

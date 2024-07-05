@@ -1,21 +1,27 @@
+from Healthbars import *
 from Weapons import *
 
 ### Main Classes
 
 class player:
-  def __init__(self):
+  
+  race = "human"
+  class_name = "player"
+  level = 1
+  dmg_modifier = 1
+  health_max = 10
+  armor = 1
+  gold = 1
+  mana = 1
+  
+  def __init__(self, name, gender):
+    self.name = name
+    self.gender = gender
+    healthbar = HealthBar(self, color="green")
+    
+  inventory = []
+  # def __init__(self):
 
-    self.race = "human"
-    self.class_name = "player"
-    self.level = 1
-    self.dmg_modifier = 1
-    self.hp = 1
-    self.armor = 1
-    self.gold = 1
-    self.mana = 1
-    
-    inventory = []
-    
     # self.strength = 1
     # self.dexterity = 1
     # self.intelligence = 1
@@ -44,12 +50,16 @@ class player:
   
   def kick(self, enemy):
     pass
+  def health(self):
+    self.healthbar.update()
   
   
   
 class bandit(player):
-  def __init__(self, race):
-    super().__init__()
+  def __init__(self, name, gender, race):
+    super().__init__(name = name, gender = gender)
+    self.name = name
+    self.gender = gender
     self.class_name = "bandit"
     self.race = race
     self.inventory = [axe, axe]
@@ -62,8 +72,10 @@ class bandit(player):
 
 
 class archer(player):
-  def __init__(self, race):
-    super().__init__()
+  def __init__(self, name, gender, race):
+    super().__init__(name = name, gender = gender)
+    self.name = name
+    self.gender = gender
     self.class_name = "archer"
     self.race = race
     self.inventory = {"bow" : bow, "arrows" : bow.arrows}
@@ -82,9 +94,11 @@ class archer(player):
 
 
 class bruiser(player):
-  def __init__(self, race):
-    super().__init__()
-    self.class_name = "bandit"
+  def __init__(self, name, gender, race):
+    super().__init__(name = name, gender = gender)
+    self.name = name
+    self.gender = gender
+    self.class_name = "bruiser"
     self.race = race
     self.inventory = [axe, axe]
   
@@ -98,9 +112,11 @@ class bruiser(player):
 
 
 class wizard(player):
-  def __init__(self, race):
-    super().__init__()
-    self.class_name = "bandit"
+  def __init__(self, name, gender, race):
+    super().__init__(name = name, gender = gender)
+    self.name = name
+    self.gender = gender
+    self.class_name = "wizard"
     self.race = race
     self.inventory = [axe, axe]
   
@@ -113,9 +129,11 @@ class wizard(player):
 
 
 class tamer(player):
-  def __init__(self, race):
-    super().__init__()
-    self.class_name = "bandit"
+  def __init__(self, name, gender, race):
+    super().__init__(name = name, gender = gender)
+    self.name = name
+    self.gender = gender
+    self.class_name = "tamer"
     self.race = race
     self.inventory = [axe, axe]
   
@@ -128,9 +146,11 @@ class tamer(player):
 
 
 class tank(player):
-  def __init__(self, race):
-    super().__init__()
-    self.class_name = "bandit"
+  def __init__(self, name, gender, race):
+    super().__init__(name = name, gender = gender)
+    self.name = name
+    self.gender = gender
+    self.class_name = "tank"
     self.race = race
     self.inventory = [axe, axe]
   
@@ -143,9 +163,11 @@ class tank(player):
 
 
 class bard(player):
-  def __init__(self, race):
-    super().__init__()
-    self.class_name = "bandit"
+  def __init__(self, name, gender, race):
+    super().__init__(name = name, gender = gender)
+    self.name = name
+    self.gender = gender
+    self.class_name = "bard"
     self.race = race
     self.inventory = [axe, axe]
   
@@ -157,10 +179,14 @@ class bard(player):
   
 
 # if you do a certain action you instantly promote to a hidden class
-class hidden(player):
-  def __init__(self, race):
-    super().__init__()
-    self.class_name = "bandit"
+  
+
+class necromancer(player):
+  def __init__(self, name, gender, race):
+    super().__init__(name = name, gender = gender)
+    self.name = name
+    self.gender = gender
+    self.class_name = "hidden"
     self.race = race
     self.inventory = [axe, axe]
   
@@ -169,15 +195,38 @@ class hidden(player):
   
   def throw_rock(self, enemy):
     pass
+
+class blacksmith(player):
+  def __init__(self, name, gender, race):
+    super().__init__(name = name, gender = gender)
+    self.name = name
+    self.gender = gender
+    self.class_name = "hidden"
+    self.race = race
+    self.inventory = [axe, axe]
   
-
-
-
-
+  def stab(self, enemy):
+    pass
+  
+  def throw_rock(self, enemy):
+    pass
 
 
   
-
+class slave_owner(player):
+  def __init__(self, name, gender, race):
+    super().__init__(name = name, gender = gender)
+    self.name = name
+    self.gender = gender
+    self.class_name = "hidden"
+    self.race = race
+    self.inventory = [axe, axe]
+  
+  def stab(self, enemy):
+    pass
+  
+  def throw_rock(self, enemy):
+    pass
 
 
 
