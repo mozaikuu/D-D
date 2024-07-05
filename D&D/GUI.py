@@ -10,8 +10,9 @@ from saveload import *
 #################################################################################
 # Testing the code
 
-moussa = necromancer("moussa", "female", "skeleton")
-# moussa = bandit("moussa", "male", "human")
+# moussa = player("moussa", "male")
+# moussa = necromancer("moussa", "female", "skeleton")
+moussa = bandit("moussa", "male", "human")
 # saif = bandit("saif", "male", "human")
 # khalid
 # omar
@@ -19,13 +20,16 @@ moussa = necromancer("moussa", "female", "skeleton")
 # waleed
 # mohamed
 
+moussa.healthbar.update()
+moussa.healthbar.draw()
+
 # call the class and print the inventory list
 # print(moussa.inventory.items.append(arrow))
 # print(moussa.inventory.items[0].__dict__)
 # slm = saveload()
 # slm.savestate(moussa)
 # slm.loadstate(moussa)
-print(moussa.__dict__)
+# print(moussa.__dict__)
 
 # try:
 #   values = ast.literal_eval(load())

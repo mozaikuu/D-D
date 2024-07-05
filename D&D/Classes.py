@@ -5,19 +5,17 @@ from Inventory import *
 ### Main Classes
 
 class player:
-  
-  race = "human"
-  class_name = "player"
-  level = 1
-  dmg_modifier = 1
-  health_max = 10
-  armor = 1
-  spells = []
-  
-  def __init__(self, name, gender):
-    self.name = name
-    self.gender = gender
-    healthbar = HealthBar(self, color="green")
+  def __init__(self):
+    self.name = ""
+    self.gender = ""
+    self.race = ""
+    self.level = 1
+    self.dmg_modifier = 1
+    self.health_max = 10
+    self.health = 10
+    self.armor = 1
+    self.spells = [] 
+    self.healthbar = HealthBar(self, color="green")
     self.inventory = bag
     
   # def __init__(self):
@@ -57,9 +55,10 @@ class player:
   
 class bandit(player):
   def __init__(self, name, gender, race):
-    super().__init__(name = name, gender = gender)
+    super().__init__()
     self.name = name
     self.gender = gender
+    self.race = race
     self.class_name = "bandit"
     self.race = race
   
@@ -72,9 +71,10 @@ class bandit(player):
 
 class archer(player): #FIXME: Add bow to inventory
   def __init__(self, name, gender, race):
-    super().__init__(name = name, gender = gender)
+    super().__init__()
     self.name = name
     self.gender = gender
+    self.race = race
     self.class_name = "archer"
     self.race = race
     self.inventory = {"bow" : bow, "arrows" : bow.arrows}
@@ -94,9 +94,10 @@ class archer(player): #FIXME: Add bow to inventory
 
 class bruiser(player):
   def __init__(self, name, gender, race):
-    super().__init__(name = name, gender = gender)
+    super().__init__()
     self.name = name
     self.gender = gender
+    self.race = race
     self.class_name = "bruiser"
     self.race = race
   
@@ -111,9 +112,10 @@ class bruiser(player):
 
 class wizard(player):
   def __init__(self, name, gender, race):
-    super().__init__(name = name, gender = gender)
+    super().__init__()
     self.name = name
     self.gender = gender
+    self.race = race
     self.class_name = "wizard"
     self.race = race
   
@@ -127,9 +129,10 @@ class wizard(player):
 
 class tamer(player):
   def __init__(self, name, gender, race):
-    super().__init__(name = name, gender = gender)
+    super().__init__()
     self.name = name
     self.gender = gender
+    self.race = race
     self.class_name = "tamer"
     self.race = race
   
@@ -143,9 +146,10 @@ class tamer(player):
 
 class tank(player):
   def __init__(self, name, gender, race):
-    super().__init__(name = name, gender = gender)
+    super().__init__()
     self.name = name
     self.gender = gender
+    self.race = race
     self.class_name = "tank"
     self.race = race
   
@@ -159,9 +163,10 @@ class tank(player):
 
 class bard(player):
   def __init__(self, name, gender, race):
-    super().__init__(name = name, gender = gender)
+    super().__init__()
     self.name = name
     self.gender = gender
+    self.race = race
     self.class_name = "bard"
     self.race = race
   
@@ -177,9 +182,10 @@ class bard(player):
 
 class necromancer(player):
   def __init__(self, name, gender, race):
-    super().__init__(name = name, gender = gender)
+    super().__init__()
     self.name = name
     self.gender = gender
+    self.race = race
     self.class_name = "hidden"
     self.race = race
   
@@ -191,9 +197,10 @@ class necromancer(player):
 
 class blacksmith(player):
   def __init__(self, name, gender, race):
-    super().__init__(name = name, gender = gender)
+    super().__init__()
     self.name = name
     self.gender = gender
+    self.race = race
     self.class_name = "hidden"
     self.race = race
   
@@ -207,9 +214,10 @@ class blacksmith(player):
   
 class slave_owner(player):
   def __init__(self, name, gender, race):
-    super().__init__(name = name, gender = gender)
+    super().__init__()
     self.name = name
     self.gender = gender
+    self.race = race
     self.class_name = "hidden"
     self.race = race
   

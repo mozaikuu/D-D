@@ -4,16 +4,17 @@ class Mob:
     self.dmg = 1
 
 class Bandit(Mob):
-  pass
+  weapon = "sword"
 
 class goblin(Mob):
-  pass
+  weapon = "dagger"
 
 class hobogoblin(goblin):
-  pass
+  weapon = "club"
 
 class wolf(Mob):
-  pass
+  def bite():
+    pass
 
 class lich(Mob):
   pass
