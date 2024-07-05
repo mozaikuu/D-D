@@ -12,18 +12,12 @@ class sword(weapons):
   pass
 
 class bow(weapons):
-  arrows = 30
-  
   def shoot_bow(self):
-    print("shooting bow")
-    if self.arrows > 0:
-      print("arrow shot")
-      self.arrows -= 1
-      return self.arrows
-    else:
-      print("you have no arrows")
-      return self.arrows
+    pass
     
+class arrows(weapons):
+  count = 30
+  pass
 
 class shield(weapons):
   pass
@@ -41,8 +35,11 @@ class axe(weapons):
 class dagger(weapons):
   pass
 
+
+# arguments = (name, weight, damage_types, damage, description, value)
 axe = axe("axe", 1, "slash", 4, "a normal axe", 1)
 bow = bow("bow", 1, "pierce", 4, "a normal bow", 1)
+arrow = arrows("arrow", 1, "pierce", 4, "a normal arrow", 1)
 
 
 

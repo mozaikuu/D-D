@@ -1,5 +1,6 @@
 from Healthbars import *
 from Weapons import *
+from Inventory import *
 
 ### Main Classes
 
@@ -11,15 +12,14 @@ class player:
   dmg_modifier = 1
   health_max = 10
   armor = 1
-  gold = 1
-  mana = 1
+  spells = []
   
   def __init__(self, name, gender):
     self.name = name
     self.gender = gender
     healthbar = HealthBar(self, color="green")
+    self.inventory = bag
     
-  inventory = []
   # def __init__(self):
 
     # self.strength = 1
@@ -62,7 +62,6 @@ class bandit(player):
     self.gender = gender
     self.class_name = "bandit"
     self.race = race
-    self.inventory = [axe, axe]
   
   def stab(self, enemy):
     pass
@@ -71,7 +70,7 @@ class bandit(player):
     pass
 
 
-class archer(player):
+class archer(player): #FIXME: Add bow to inventory
   def __init__(self, name, gender, race):
     super().__init__(name = name, gender = gender)
     self.name = name
@@ -100,7 +99,6 @@ class bruiser(player):
     self.gender = gender
     self.class_name = "bruiser"
     self.race = race
-    self.inventory = [axe, axe]
   
   def engage(self, enemy):
     pass
@@ -118,7 +116,6 @@ class wizard(player):
     self.gender = gender
     self.class_name = "wizard"
     self.race = race
-    self.inventory = [axe, axe]
   
   def stab(self, enemy):
     pass
@@ -135,7 +132,6 @@ class tamer(player):
     self.gender = gender
     self.class_name = "tamer"
     self.race = race
-    self.inventory = [axe, axe]
   
   def stab(self, enemy):
     pass
@@ -152,7 +148,6 @@ class tank(player):
     self.gender = gender
     self.class_name = "tank"
     self.race = race
-    self.inventory = [axe, axe]
   
   def stab(self, enemy):
     pass
@@ -169,7 +164,6 @@ class bard(player):
     self.gender = gender
     self.class_name = "bard"
     self.race = race
-    self.inventory = [axe, axe]
   
   def stab(self, enemy):
     pass
@@ -188,7 +182,6 @@ class necromancer(player):
     self.gender = gender
     self.class_name = "hidden"
     self.race = race
-    self.inventory = [axe, axe]
   
   def stab(self, enemy):
     pass
@@ -203,7 +196,6 @@ class blacksmith(player):
     self.gender = gender
     self.class_name = "hidden"
     self.race = race
-    self.inventory = [axe, axe]
   
   def stab(self, enemy):
     pass
@@ -220,7 +212,6 @@ class slave_owner(player):
     self.gender = gender
     self.class_name = "hidden"
     self.race = race
-    self.inventory = [axe, axe]
   
   def stab(self, enemy):
     pass

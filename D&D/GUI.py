@@ -3,46 +3,29 @@
 from Mobs import *
 from Classes import *
 from Weapons import *
-from Dice20 import roll20
+from Dice20 import *
+from saveload import *
 
 
 #################################################################################
 # Testing the code
 
 moussa = necromancer("moussa", "female", "skeleton")
-saif = bandit("saif", "male", "human")
+# moussa = bandit("moussa", "male", "human")
+# saif = bandit("saif", "male", "human")
 # khalid
 # omar
 # nour
 # waleed
 # mohamed
 
-
-# call the class bandit and print the inventory list
-# saif.healthbar.update()
-# print(saif.inventory)
-# print(saif.shoot_arrow())
-# print(saif.inventory["arrows"])
-# [print(i.name) for i in saif.inventory]
-# saif.inventory[0].throw_axe(bandit)
-
-# print(saif.level)
-
-import ast
-
-savefile = f"{saif.name}.txt"
-
-def savefile():
-  with open(savefile, "w") as f:
-    f.write(str(saif.__dict__))
-    
-def loadfile():
-  with open(savefile, "r") as f:
-    read = f.read()
-    print(read)
-  
-savefile()
-loadfile()
+# call the class and print the inventory list
+# print(moussa.inventory.items.append(arrow))
+# print(moussa.inventory.items[0].__dict__)
+# slm = saveload()
+# slm.savestate(moussa)
+# slm.loadstate(moussa)
+print(moussa.__dict__)
 
 # try:
 #   values = ast.literal_eval(load())
