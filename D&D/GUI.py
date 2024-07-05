@@ -20,15 +20,31 @@ moussa = bandit("moussa", "male", "human")
 # waleed
 # mohamed
 
-moussa.healthbar.update()
-moussa.healthbar.draw()
+#TODO: fix inventory better code
 
-# call the class and print the inventory list
+# TEST SUCCESS
+# slm = saveload()
+
+# moussa.health = 7
+# slm.savestate(moussa)
+
+# slm.loadstate(moussa)
+
+
+# moussa.healthbar.update()
+# moussa.healthbar.draw()
+
+# print(moussa.__dict__)
+
+
+# saveload
 # print(moussa.inventory.items.append(arrow))
 # print(moussa.inventory.items[0].__dict__)
 # slm = saveload()
 # slm.savestate(moussa)
 # slm.loadstate(moussa)
+
+# call the class and print the inventory list
 # print(moussa.__dict__)
 
 # try:
