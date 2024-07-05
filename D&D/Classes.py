@@ -1,7 +1,12 @@
+from Weapons import *
+
 ### Main Classes
 
 class player:
   def __init__(self):
+
+    self.race = "human"
+    self.class_name = "player"
     self.level = 1
     self.dmg_modifier = 1
     self.hp = 1
@@ -16,7 +21,22 @@ class player:
     # self.intelligence = 1
     # self.charisma = 1
 
-  def threaten(self, enemy):
+  def seduce(self, enemy):
+    pass
+  
+  def ask_a_question(self, enemy):
+    pass
+  
+  def leave(self, enemy):
+    pass
+  
+  def presuade(self, enemy):
+    pass
+  
+  def attack(self, enemy):
+    pass
+  
+  def defend(self, enemy):
     pass
   
   def punch(self, enemy):
@@ -28,6 +48,11 @@ class player:
   
   
 class bandit(player):
+  def __init__(self, race):
+    super().__init__()
+    self.class_name = "bandit"
+    self.race = race
+    self.inventory = [axe, axe]
   
   def stab(self, enemy):
     pass
@@ -36,11 +61,17 @@ class bandit(player):
     pass
 
 
-
 class archer(player):
+  def __init__(self, race):
+    super().__init__()
+    self.class_name = "archer"
+    self.race = race
+    self.inventory = {"bow" : bow, "arrows" : bow.arrows}
   
-  def shoot_arrow(self, enemy):
-    pass
+  def shoot_arrow(self):
+    bow.shoot_bow()
+    self.inventory["arrows"] = bow.arrows
+    return self.inventory
   
   def gain_distance(self, enemy):
     pass
@@ -51,16 +82,27 @@ class archer(player):
 
 
 class bruiser(player):
+  def __init__(self, race):
+    super().__init__()
+    self.class_name = "bandit"
+    self.race = race
+    self.inventory = [axe, axe]
   
-  def stab(self, enemy):
+  def engage(self, enemy):
     pass
   
-  def throw_rock(self, enemy):
+  def hold_ground(self, enemy):
     pass
+  
   
 
 
 class wizard(player):
+  def __init__(self, race):
+    super().__init__()
+    self.class_name = "bandit"
+    self.race = race
+    self.inventory = [axe, axe]
   
   def stab(self, enemy):
     pass
@@ -71,6 +113,11 @@ class wizard(player):
 
 
 class tamer(player):
+  def __init__(self, race):
+    super().__init__()
+    self.class_name = "bandit"
+    self.race = race
+    self.inventory = [axe, axe]
   
   def stab(self, enemy):
     pass
@@ -81,6 +128,11 @@ class tamer(player):
 
 
 class tank(player):
+  def __init__(self, race):
+    super().__init__()
+    self.class_name = "bandit"
+    self.race = race
+    self.inventory = [axe, axe]
   
   def stab(self, enemy):
     pass
@@ -91,6 +143,11 @@ class tank(player):
 
 
 class bard(player):
+  def __init__(self, race):
+    super().__init__()
+    self.class_name = "bandit"
+    self.race = race
+    self.inventory = [axe, axe]
   
   def stab(self, enemy):
     pass
@@ -101,6 +158,11 @@ class bard(player):
 
 # if you do a certain action you instantly promote to a hidden class
 class hidden(player):
+  def __init__(self, race):
+    super().__init__()
+    self.class_name = "bandit"
+    self.race = race
+    self.inventory = [axe, axe]
   
   def stab(self, enemy):
     pass

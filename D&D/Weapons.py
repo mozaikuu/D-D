@@ -12,7 +12,12 @@ class sword(weapons):
   pass
 
 class bow(weapons):
-  pass
+  arrows = 30
+  
+  def shoot_bow(self):
+    self.arrows -= 1
+    print("shooting bow")
+    return self.arrows
 
 class shield(weapons):
   pass
@@ -24,9 +29,11 @@ class staff(weapons):
   pass
 
 class axe(weapons):
-  pass
+    def throw_axe(self, enemy):
+      print("throwing axe")
 
 class dagger(weapons):
   pass
 
-longsword = sword("longsword", 1, "slash", 4, "a normal longsword", 1)
+axe = axe("axe", 1, "slash", 4, "a normal axe", 1)
+bow = bow("bow", 1, "pierce", 4, "a normal bow", 1)

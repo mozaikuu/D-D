@@ -6,11 +6,28 @@ from Weapons import *
 from Dice20 import roll20
 
 
-choice = input("What would you like to do? ")
+#################################################################################
+# Testing the code
 
-istrue = True
+# call the class bandit and print the inventory list
+# saif = archer("human")
+# print(saif.inventory)
+# print(saif.shoot_arrow())
+# print(saif.inventory["arrows"])
+# [print(i.name) for i in saif.inventory]
+# saif.inventory[0].throw_axe(bandit)
+
+#################################################################################
+
+
+
+
+
+istrue = False  #FIXME: Turn Back on
 
 while istrue:
+  choice = input("What would you like to do? ")
+  
   if choice == "1":
     print("actions")
     # loads a character and lists their stats, items and possible moves
@@ -51,3 +68,7 @@ while istrue:
   else:
     print("invalid input")
     # reruns the choice input
+    
+    
+    
+
