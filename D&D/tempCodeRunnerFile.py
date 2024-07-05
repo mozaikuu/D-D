@@ -1,2 +1,2 @@
 
-  moussa.bag.weapons.append(arrow)
+# saif.health += 6

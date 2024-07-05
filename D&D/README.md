@@ -4,7 +4,9 @@
    there is a chance u go to the void
    or you start a brand new character
 
-2. That is all for now
+2. talking, trading, etc. do not consume moves
+
+3. combined moves consume both party members moves
 
 # store players + stats in a csv file
 

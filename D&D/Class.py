@@ -2,6 +2,9 @@ from Healthbars import *
 from Weapons import *
 from Inventory import *
 
+# TODO: make races come with preset skills
+# TODO: leveling up increases stats automatically
+
 ### Main Classes
 
 class player:
@@ -18,6 +21,7 @@ class player:
     self.bag = bag
     self.hp_color = "green"
     self.healthbar = HealthBar(self, color = self.hp_color)
+    self.desc = "basic mold"
     
   # def __init__(self):
 
@@ -68,6 +72,12 @@ class bandit(player):
     pass
   
   def throw_rock(self, enemy):
+    pass
+  
+  def extra_loot(self, enemy):
+    pass
+  
+  def quadruple_crit():
     pass
 
 
@@ -127,6 +137,26 @@ class wizard(player):
   def throw_rock(self, enemy):
     pass
   
+  
+  
+class comedian(player):
+  def __init__(self, name, gender, race):
+    super().__init__()
+    self.name = name
+    self.gender = gender
+    self.race = race
+    self.class_name = "comedian"
+    self.desc = "whenever you speak it is a joke"
+    
+  
+  def sarcasm(self, enemy):
+    pass
+  
+  def make_a_Joke(self, enemy):
+    pass
+  
+  # def breathe_fire(self, enemy):
+  #   pass
 
 
 class tamer(player):
