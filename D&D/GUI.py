@@ -1,5 +1,9 @@
 # TODO: add tkinter
+# TODO: fix inventory better code? its kinda good ngl
+# TODO: make better save load system later
 
+
+import pickle
 from Mobs import *
 from Classes import *
 from Weapons import *
@@ -8,52 +12,85 @@ from saveload import *
 
 
 #################################################################################
-# Testing the code
+# Testing the code / Spotify cries in the wind
 
-# moussa = player("moussa", "male")
+
+loadstate()
+
+#access characters:
+moussa = characters['moussa']
+saif = characters['saif']
+khalid = characters['khalid']
+omar = characters['omar']
+nour = characters['nour']
+waleed = characters['waleed']
+mohamed = characters['mohamed']
+
+# moussa= MultiClass("moussa", "female", "skeleton") # FIXME Multiclass
+# -------------------------------------------------------------------------------
+
+
+# moussa.bag.weapons.append("sword")
+# moussa.bag.weapons.append(arrow)
+
+
+print(moussa.bag.weapons)
+print(moussa.__dict__)
+
+# print(saif.bag.weapons)
+
+# moussa.health = 6
+
+moussa.hp()
+saif.hp()
+khalid.hp()
+omar.hp()
+nour.hp()
+waleed.hp()
+mohamed.hp()
+
+savestate()
+# -------------------------------------------------------------------------------
+
+# # slm = saveload()
+
+# # Load Players
 # moussa = necromancer("moussa", "female", "skeleton")
-moussa = bandit("moussa", "male", "human")
-# saif = bandit("saif", "male", "human")
-# khalid
-# omar
-# nour
-# waleed
-# mohamed
+# # saif = bandit("saif", "male", "human")
+# # khalid
+# # omar
+# # nour
+# # waleed
+# # mohamed
 
-#TODO: fix inventory better code
+# # At the start of your script, load the moussa object from the file
+# with open('moussa.pkl', 'rb') as f:
+#     moussa = pickle.load(f)
+    
 
-# TEST SUCCESS
-# slm = saveload()
 
-# moussa.health = 7
-# slm.savestate(moussa)
 
-# slm.loadstate(moussa)
 
+
+# moussa.bag.weapons.append("sword")
+# moussa.bag.weapons.append(arrow)
+
+
+# print(moussa.bag.weapons)
+# print(moussa.__dict__)
+
+# # moussa.health = 6
 
 # moussa.healthbar.update()
 # moussa.healthbar.draw()
 
-# print(moussa.__dict__)
 
 
-# saveload
-# print(moussa.inventory.items.append(arrow))
-# print(moussa.inventory.items[0].__dict__)
-# slm = saveload()
-# slm.savestate(moussa)
-# slm.loadstate(moussa)
+# # At the end of your script, save the moussa object to a file
+# with open('moussa.pkl', 'wb') as f:
+#     pickle.dump(moussa, f)
 
-# call the class and print the inventory list
-# print(moussa.__dict__)
 
-# try:
-#   values = ast.literal_eval(load())
-#   print(values)
-# except:
-#   print("creating new file...")
-#   values = {}
-  
 
 
 #################################################################################

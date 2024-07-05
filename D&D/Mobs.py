@@ -1,7 +1,11 @@
+from Healthbars import *
+
 class Mob:
   def __init__(self):
     self.hp = 1
     self.dmg = 1
+    self.hp_color = "red"
+    self.healthbar = HealthBar(self, color = self.hp_color)
 
 class Bandit(Mob):
   weapon = "sword"

@@ -10,7 +10,7 @@ class HealthBar:
     symbol_remaining: str = "█"
     symbol_lost: str = "_"
     barrier: str = "|"
-    colors: dict = {"red": "\033[91m",
+    colors: dict = {"red": "\033[31m",
                     "purple": "\33[95m",
                     "blue": "\33[34m",
                     "blue2": "\33[36m",

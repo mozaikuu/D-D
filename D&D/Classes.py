@@ -15,8 +15,9 @@ class player:
     self.health = 10
     self.armor = 1
     self.spells = [] 
-    self.healthbar = HealthBar(self, color="green")
-    self.inventory = bag
+    self.bag = bag
+    self.hp_color = "green"
+    self.healthbar = HealthBar(self, color = self.hp_color)
     
   # def __init__(self):
 
@@ -48,8 +49,9 @@ class player:
   
   def kick(self, enemy):
     pass
-  def health(self):
+  def hp(self):
     self.healthbar.update()
+    self.healthbar.draw()
   
   
   
@@ -60,7 +62,7 @@ class bandit(player):
     self.gender = gender
     self.race = race
     self.class_name = "bandit"
-    self.race = race
+
   
   def stab(self, enemy):
     pass
@@ -187,7 +189,8 @@ class necromancer(player):
     self.gender = gender
     self.race = race
     self.class_name = "hidden"
-    self.race = race
+    self.hp_color = "purple"
+    self.healthbar = HealthBar(self, color = self.hp_color)
   
   def stab(self, enemy):
     pass
@@ -202,7 +205,8 @@ class blacksmith(player):
     self.gender = gender
     self.race = race
     self.class_name = "hidden"
-    self.race = race
+    self.hp_color = "purple"
+    self.healthbar = HealthBar(self, color = self.hp_color)
   
   def stab(self, enemy):
     pass
@@ -219,7 +223,8 @@ class slave_owner(player):
     self.gender = gender
     self.race = race
     self.class_name = "hidden"
-    self.race = race
+    self.hp_color = "purple"
+    self.healthbar = HealthBar(self, color = self.hp_color)
   
   def stab(self, enemy):
     pass
@@ -227,6 +232,18 @@ class slave_owner(player):
   def throw_rock(self, enemy):
     pass
 
+
+
+# to fix it i think i migrate everything to this class
+class MultiClass(necromancer, blacksmith, slave_owner):
+  def __init__(self, name, gender, race):
+    super().__init__(name, gender, race)
+    self.name = name
+    self.gender = gender
+    self.race = race
+    self.class_name = {"hidden" : necromancer, "hidden" : blacksmith, "hidden" : slave_owner}
+    self.hp_color = "yellow"
+    self.healthbar = HealthBar(self, color = self.hp_color)
 
 
 
