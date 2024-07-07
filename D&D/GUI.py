@@ -1,7 +1,3 @@
-# TODO: add tkinter
-# TODO: fix inventory better code? its kinda good ngl
-# TODO: make better save load system later
-
 import pickle
 from Mobs import *
 from Class import *
